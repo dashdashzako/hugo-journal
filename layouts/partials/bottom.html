@@ -4,10 +4,10 @@
           <link itemprop="url" href="{{ .Site.BaseURL }}">
           <span itemprop="name">{{- .Site.Author.name -}}</span>
 
-          {{- if isset .Site.Params "work" -}},
-          <span itemprop="jobTitle">{{- .Site.Params.jobTitle -}}</span> at
-          <span itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="{{ .Site.Params.companyUrl }}"><span itemprop="name">
-            {{- .Site.Params.company -}}
+          {{ if isset .Site.Params "work" -}},
+          <span itemprop="jobTitle">{{- .Site.Params.work.jobTitle -}}</span> at
+          <span itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="{{ .Site.Params.work.companyUrl }}"><span itemprop="name">
+            {{- .Site.Params.work.company -}}
           </span></a></span>
           {{- end -}}
 
