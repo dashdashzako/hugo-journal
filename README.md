@@ -6,7 +6,7 @@ It focuses on improving reading experience with high contrast colors and no fanc
 
 It also uses [Highlight.js](https://highlightjs.org/) for the syntaxic coloration of code snippets.
 
-Demo is available [here](https://damiencaselli.github.io/journal-demo/).
+Demo is available [here](https://damiencaselli.github.io/hugo-journal-demo/).
 
 ## Installation
 
@@ -37,7 +37,7 @@ A few parameters should be adjusted in the site config:
 Both highlight theme and lib can be overridden. Just drop your build in the `static/js` directory, and the theme file in the `static/css` directory.  
 Note that the theme has to be named `highlight.css`.
 
-### Update styles
+### Customize styles
 
 sass is required to build the theme css file. If [bundler](http://bundler.io/) is installed on your system:
 

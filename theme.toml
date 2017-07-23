@@ -1,12 +1,12 @@
 name = "Journal"
 license = "MIT"
-licenselink = "https://github.com/damiencaselli/journal/blob/master/LICENSE.md"
+licenselink = "https://github.com/damiencaselli/hugo-journal/blob/master/LICENSE.md"
 description = "Minimalist theme for Hugo."
-homepage = "https://damiencaselli.github.io/journal"
+homepage = "https://damiencaselli.github.io/hugo-journal"
 tags = ["minimalist", "reading", "blog"]
 features = ["blog"]
 min_version = "0.25.1"
 
 [author]
   name = "Damien Caselli"
-  homepage = "https://damiencaselli.github.io/journal"
+  homepage = "https://github.com/damiencaselli"
