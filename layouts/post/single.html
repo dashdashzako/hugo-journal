@@ -1,0 +1,13 @@
+{{ partial "top.html" . }}
+
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">{{ .Title }}</h1>
+      <time class="post-date" datetime="{{ dateFormat "2006-01-02T15:04:05Z-07:00" .Date }}">{{ dateFormat "02 Jan 2006" .Date }}</time>
+    </header>
+
+    {{ .Content }}
+
+  </article>
+
+{{ partial "bottom.html" . }}

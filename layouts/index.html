@@ -1,0 +1,22 @@
+{{ partial "top.html" . }}
+
+  <article class="posts">
+
+    {{ range (where .Data.Pages "Type" "post").GroupByDate "2006" -}}
+    <section>
+      <h2>{{ .Key }}</h2>
+
+      <ol>
+        {{ range .Pages -}}
+        <li>
+          <time datetime="{{ dateFormat "2006-01-02T15:04:05Z-07:00" .Date }}">{{ dateFormat "Jan 02" .Date }}</time>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{- end }}
+      </ol>
+    </section>
+    {{ end }}
+
+  </article>
+
+{{ partial "bottom.html" . }}
