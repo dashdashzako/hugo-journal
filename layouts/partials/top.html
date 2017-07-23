@@ -23,9 +23,9 @@
     {{- end }}
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Arvo:400,700">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.css">
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/journal.css">
-    <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+    <link rel="stylesheet" href="{{ "css/highlight.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/journal.css" | relURL }}">
+    <link href="{{ "index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
 
   </head>
 
