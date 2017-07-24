@@ -23,7 +23,7 @@ A few parameters should be adjusted in the site config:
   twitterUsername = "your_twitter_handle"
   tagline = "Blog tagline. Shown under index title."
 [params.work]
-  jobTitle = "your job"
+  jobTitle = "occupation"
   company = "the company"
   companyUrl = "https://the.company.url/"
 [params.gpg]
