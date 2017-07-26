@@ -9,7 +9,7 @@
       <ol>
         {{ range .Pages -}}
         <li>
-          <time datetime="{{ dateFormat "2006-01-02T15:04:05Z-07:00" .Date }}">{{ dateFormat "Jan 02" .Date }}</time>
+          <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "Jan 02"}}</time>
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </li>
         {{- end }}
