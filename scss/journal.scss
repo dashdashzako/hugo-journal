@@ -192,7 +192,7 @@ h6 {
   width: 100%;
   max-width: 38rem;
   margin: 0 auto;
-  padding: 1rem;
+  padding: .5rem;
 
   @media screen and (min-width: $break-small) {
     padding: 1rem 0;
@@ -270,4 +270,8 @@ h6 {
     margin: $std-margin;
     text-align: right;
   }
+}
+
+.hljs {
+  font-size: .875rem;
 }

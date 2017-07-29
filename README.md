@@ -48,5 +48,5 @@ bundle install
 scss-lint scss/journal.scss
 
 # build stylesheet
-sass --scss --sourcemap=none themes/journal/scss/journal.scss themes/journal/static/css/journal.css
+sass --scss --sourcemap=none scss/journal.scss static/css/journal.css
 ```
