@@ -3,27 +3,30 @@
         <span itemscope itemtype="http://schema.org/Person">
           <link itemprop="url" href="{{ .Site.BaseURL }}">
           <span itemprop="name">{{- .Site.Author.name -}}</span>
-
-          {{ if isset .Site.Params "work" -}},
+          {{- if isset .Site.Params "work" -}},
           <span itemprop="jobTitle">{{- .Site.Params.work.jobTitle -}}</span> at
           <span itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"><a itemprop="url" href="{{ .Site.Params.work.companyUrl }}"><span itemprop="name">
-            {{- .Site.Params.work.company -}}
+          {{- .Site.Params.work.company -}}
           </span></a></span>
           {{- end -}}
 
           <br>
 
           {{ if isset .Site.Params "githubusername" -}}
-          <a itemprop="sameAs" href="https://github.com/{{ .Site.Params.githubUsername }}" title="GitHub">GH</a>
+          <a itemprop="sameAs" href="https://github.com/{{ .Site.Params.githubUsername }}" title="GitHub">GitHub</a>
           {{- end }}
-
-          {{ if isset .Site.Params "twitterusername" -}}
-          <a itemprop="sameAs" href="https://twitter.com/{{ .Site.Params.twitterUsername }}" title="Twitter">TW</a>
-          {{- end}}
 
           {{ if isset .Site.Params "gpg" -}}
           <a itemprop="sameAs" href="{{ .Site.Params.gpg.link }}" title="GPG {{ .Site.Params.gpg.key }} (fingerprint: {{ .Site.Params.gpg.fingerprint }})">GPG</a>
           {{- end }}
+          
+          {{ if isset .Site.Params "mastodon" -}}
+          <a itemprop="sameAs" href="{{ .Site.Params.mastodon }}" title="Mastodon">Mastodon</a>
+          {{- end }}
+
+          {{ if isset .Site.Params "twitterusername" -}}
+          <a itemprop="sameAs" href="https://twitter.com/{{ .Site.Params.twitterUsername }}" title="Twitter">Twitter</a>
+          {{- end}}
         </span>
 
         <!-- {{ .Hugo.BuildDate }} -->

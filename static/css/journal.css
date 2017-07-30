@@ -6,7 +6,7 @@
 html {
   background-color: #fbfbfb;
   color: #303030;
-  font-family: "Arvo", serif;
+  font-family: "Arvo", "Fira Sans", sans;
   font-size: 1rem; }
   @media screen and (min-width: 800px) {
     html {
@@ -94,7 +94,7 @@ abbr {
 kbd,
 code,
 pre {
-  font-family: '"Source Code Pro"', monospace; }
+  font-family: '"Fira Code"', monospace; }
 
 pre {
   max-width: 100%; }
