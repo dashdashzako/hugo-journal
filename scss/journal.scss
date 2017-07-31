@@ -1,9 +1,32 @@
+/* https://github.com/antonxheight/Arvo */
+@font-face {
+  font-family: Arvo;
+  src: url(../font/Arvo-Regular_201.woff);
+}
+@font-face {
+  font-family: Arvo;
+  src: url(../font/Arvo-Bold_201.woff);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Arvo;
+  src: url(../font/Arvo-Italic_201.woff);
+  font-style: italic;
+}
+@font-face {
+  font-family: Arvo;
+  src: url(../font/Arvo-BoldItalic_201.woff);
+  font-weight: bold;
+  font-style: italic;
+}
+
+
 $black: #303030;
 $gray: #686868;
 $light-gray: #e5e5e5;
 $white: #fbfbfb;
-$serif: 'Arvo';
-$monospace: '"Source Code Pro"';
+$typeface: 'Arvo';
+$monospace: '"Fira Code"';
 $fs: 1rem;
 $fs-large: 1.125rem;
 $std-margin: 0 0 1rem;
@@ -20,7 +43,7 @@ html {
 
   color: $black;
 
-  font-family: $serif, serif;
+  font-family: $typeface, "Fira Sans", sans;
   font-size: $fs;
 
   @media screen and (min-width: $break-small) {
