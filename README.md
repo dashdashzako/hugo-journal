@@ -1,12 +1,6 @@
 # Journal
 
-_Journal_ is a minimalist theme for [Hugo](http://gohugo.io).
-
-It focuses on improving reading experience with high contrast colors and no fancy effect.
-
-It also uses [Highlight.js](https://highlightjs.org/) for the syntaxic coloration of code snippets.
-
-Demo is available [here](https://damiencaselli.github.io/hugo-journal-demo/).
+_Journal_ is a minimalist theme for [Hugo](http://gohugo.io), forked from [Damien](https://github.com/damiencaselli/hugo-journal/issues) who has a [demo](https://damiencaselli.github.io/hugo-journal-demo/).
 
 ## Installation
 
@@ -14,13 +8,17 @@ Please refer to the [Hugo documentation](http://gohugo.io/themes/installing/).
 
 ## Configuration
 
-A few parameters should be adjusted in the site config:
+The following parameters can be adjusted in the site config:
 
 ```toml
+[author]
+  maillocal = "mail localpart only (reader needs to complete address)"
+  occupation = "goes after the author's name (or use params.work)" 
 [params]
   description = "Blog meta description."
   githubUsername = "your_gh_username"
   twitterUsername = "your_twitter_handle"
+  mastodon = "your mastodon user url"
   tagline = "Blog tagline. Shown under index title."
 [params.work]
   jobTitle = "occupation"
@@ -39,11 +37,9 @@ Note that the theme has to be named `highlight.css`.
 
 ### Customize styles
 
-sass is required to build the theme css file. If [bundler](http://bundler.io/) is installed on your system:
+sass is required to build the theme css file:
 
 ```bash
-bundle install
-
 # test your changes
 scss-lint scss/journal.scss
 
