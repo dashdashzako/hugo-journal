@@ -8,6 +8,7 @@ theme = "journal"
   homepage = "https://your.homepage.com/"
 
 [params]
+  useCDN = false
   description = "Blog meta description."
   githubUsername = "your_gh_username"
   twitterUsername = "your_twitter_handle"
