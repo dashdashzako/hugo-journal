@@ -6,7 +6,7 @@ It focuses on improving reading experience with high contrast colors and no fanc
 
 It also uses [Highlight.js](https://highlightjs.org/) for the syntaxic coloration of code snippets.
 
-Demo is available [here](https://damiencaselli.github.io/hugo-journal-demo/).
+Demo is available [here](https://dashdashzako.github.io/hugo-journal-demo/).
 
 ## Installation
 
