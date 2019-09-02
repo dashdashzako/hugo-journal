@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 
-  <head>
-    <meta charset="utf-8">
-    {{ .Hugo.Generator }}
+<head>
+  <meta charset="utf-8">
+  {{ hugo.Generator }}
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="{{ .Site.Author.name }}">
-    <meta property="og:url" content="{{ .Permalink }}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="{{ .Site.Author.name }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+
+  {{ if .IsHome -}}
+  <title>{{ .Site.Title }}</title>
+  <meta property="og:title" content="{{ .Site.Title }}">
+  <meta property="og:type" content="website">
+  <meta name="description" content="{{ .Site.Params.description }}">
+  {{- else -}}
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+  <meta property="og:type" content="article">
+  <meta name="description" content="{{ .Description }}">
+  {{- end }}
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Arvo:400,700">
+  <link rel="stylesheet" href="{{ "css/highlight.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/journal.css" | relURL }}">
+  <link href="{{ "index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+
+</head>
+
+<body>
+  <div class="container">
 
     {{ if .IsHome -}}
-    <title>{{ .Site.Title }}</title>
-    <meta property="og:title" content="{{ .Site.Title }}">
-    <meta property="og:type" content="website">
-    <meta name="description" content="{{ .Site.Params.description }}">
+    <header class="site-header">
+      <h1>{{ .Site.Title }}</h1>
+      <p>{{ .Site.Params.tagline }}</p>
+    </header>
     {{- else -}}
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
-    <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
-    <meta property="og:type" content="article">
-    <meta name="description" content="{{ .Description }}">
+    <nav class="site-nav">
+      <a href="{{ .Site.BaseURL }}">Index</a>
+    </nav>
     {{- end }}
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Arvo:400,700">
-    <link rel="stylesheet" href="{{ "css/highlight.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "css/journal.css" | relURL }}">
-    <link href="{{ "index.xml" | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
-
-  </head>
-
-  <body>
-    <div class="container">
-
-      {{ if .IsHome -}}
-      <header class="site-header">
-        <h1>{{ .Site.Title }}</h1>
-        <p>{{ .Site.Params.tagline }}</p>
-      </header>
-      {{- else -}}
-      <nav class="site-nav">
-        <a href="{{ .Site.BaseURL }}">Index</a>
-      </nav>
-      {{- end }}
