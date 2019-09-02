@@ -2,7 +2,7 @@
 
   <article class="posts">
 
-    {{ range (where site.RegularPages).GroupByDate "2006" -}}
+    {{ range site.RegularPages.GroupByDate "2006" -}}
     <section>
       <h2>{{ .Key }}</h2>
 
