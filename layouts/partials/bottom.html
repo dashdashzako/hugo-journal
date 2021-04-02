@@ -30,8 +30,10 @@
       </footer>
     </div>
 
+  {{ if not .IsHome -}}
   <script src="{{ "js/highlight.pack.js" | relURL }}"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  {{- end }}
 
   </body>
 </html>
