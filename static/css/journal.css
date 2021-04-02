@@ -1,16 +1,28 @@
+:root {
+  --color-dark: #303030;
+  --color-grey: #686868;
+  --color-light-grey: #e5e5e5;
+  --color-light: #fbfbfb;
+  --font-serif: 'Arvo';
+  --font-monospace: '"Source Code Pro"';
+  --font-size: 1rem;
+  --font-size-large: 1.125rem;
+  --margin: 0 0 1rem;
+  --breakpoint-sm: 800px; }
+
 *,
 *::before,
 *::after {
   box-sizing: border-box; }
 
 html {
-  background-color: #fbfbfb;
-  color: #303030;
-  font-family: "Arvo", serif;
-  font-size: 1rem; }
-  @media screen and (min-width: 800px) {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-family: var(--font-serif), serif;
+  font-size: --font-size; }
+  @media screen and (min-width: var(--breakpoint-sm)) {
     html {
-      font-size: 1.125rem; } }
+      font-size: var(--font-size) -large; } }
 
 body {
   line-height: 1.6; }
@@ -24,7 +36,7 @@ p,
 figure,
 pre,
 blockquote {
-  margin: 0 0 1rem; }
+  margin: var(--margin); }
 
 hr {
   display: block;
@@ -32,7 +44,7 @@ hr {
   height: 0;
   margin: 2rem 0;
   border: 0;
-  border-top: 1px solid #686868; }
+  border-top: 1px solid var(--color-grey); }
 
 figure .representation {
   display: block;
@@ -51,8 +63,8 @@ img {
 
 blockquote {
   padding: 1rem;
-  border-left: 5px solid #e5e5e5;
-  color: #686868;
+  border-left: 5px solid var(--color-light-grey);
+  color: var(--color-grey);
   font-style: italic; }
   blockquote p {
     margin: 0; }
@@ -68,7 +80,7 @@ a {
   text-decoration: none; }
   a:hover {
     border-bottom-color: currentColor;
-    color: #686868; }
+    color: var(--color-grey); }
 
 ol,
 ul {
@@ -94,7 +106,7 @@ abbr {
 kbd,
 code,
 pre {
-  font-family: '"Source Code Pro"', monospace; }
+  font-family: var(--font-monospace), monospace; }
 
 pre {
   max-width: 100%; }
@@ -103,7 +115,7 @@ kbd,
 code {
   margin: 0;
   padding: .125rem .25rem 0;
-  background-color: #e5e5e5; }
+  background-color: var(--color-light-grey); }
 
 article,
 section {
@@ -140,7 +152,7 @@ h6 {
   max-width: 38rem;
   margin: 0 auto;
   padding: .5rem; }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: var(--breakpoint-sm)) {
     .container {
       padding: 1rem 0; } }
 
@@ -160,7 +172,7 @@ h6 {
   font-size: .8125rem; }
   .site-footer [itemprop="sameAs"] + [itemprop="sameAs"] {
     margin-left: .4rem; }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: var(--breakpoint-sm)) {
     .site-footer {
       margin-bottom: .5rem; } }
 
@@ -169,18 +181,18 @@ h6 {
   list-style: none; }
 .posts li {
   margin-bottom: .5rem; }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: var(--breakpoint-sm)) {
     .posts li {
       display: flex;
       flex-direction: row; } }
 .posts time {
   display: block; }
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: var(--breakpoint-sm)) {
     .posts time {
       flex: 0 0 5rem; } }
   .posts time + a {
     margin-left: 1rem; }
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: var(--breakpoint-sm)) {
       .posts time + a {
         margin-left: 2rem; } }
 
@@ -188,7 +200,7 @@ h6 {
   margin-bottom: 3rem; }
 .post .post-date {
   display: block;
-  margin: 0 0 1rem;
+  margin: var(--margin);
   text-align: right; }
 
 .hljs {

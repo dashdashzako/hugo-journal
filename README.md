@@ -36,17 +36,3 @@ A few parameters should be adjusted in the site config:
 
 Both highlight theme and lib can be overridden. Just drop your build in the `static/js` directory, and the theme file in the `static/css` directory.  
 Note that the theme has to be named `highlight.css`.
-
-### Customize styles
-
-sass is required to build the theme css file. If [bundler](http://bundler.io/) is installed on your system:
-
-```bash
-bundle install
-
-# test your changes
-scss-lint scss/journal.scss
-
-# build stylesheet
-sass --scss --sourcemap=none scss/journal.scss static/css/journal.css
-```
